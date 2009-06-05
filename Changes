@@ -1,0 +1,13 @@
+0.025 Initial Release with full packaging (3 tests, pod missing)
+
+0.026
+- Added proto of Child / Tree loading (experimental interface)
+- Tuned up pod documentation
+
+0.027
+- Public release candidate for preview
+
+0.028
+- Initial public release
+- Last minute pod cleanups
+

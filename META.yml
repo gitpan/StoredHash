@@ -1,0 +1,15 @@
+--- #YAML:1.0
+name:                StoredHash
+version:             0.028
+abstract:            Easy Insert, Update, Load and Delete of a DB (DBI) Stored Hash
+license:             ~
+author:              
+    - Olli Hollmen
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    Data::Dumper:                  2.121
+    DBI:                           1.4
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
