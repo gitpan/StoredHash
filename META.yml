@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                StoredHash
-version:             0.028
+version:             0.029
 abstract:            Easy Insert, Update, Load and Delete of a DB (DBI) Stored Hash
 license:             ~
 author:              

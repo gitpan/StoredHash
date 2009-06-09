@@ -25,7 +25,7 @@ use Data::Dumper;
 
 #use strict;
 #use warnings;
-our $VERSION = '0.028';
+our $VERSION = '0.029';
 # Module extraction config
 our $mecfg = {};
 # Instance attr (create access ...)

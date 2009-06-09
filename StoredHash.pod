@@ -15,8 +15,8 @@ classes, persistence code or SQL.
    use Data::Dumper;
    
    my $dbh = DBI->connect("dbi:SQLite:dbname=zoo.db");
-   # Uncomment for lightweight demonstration of StoredHash in action (with SQLite)
-   #$dbh->do("CREATE TABLE animals (speciesid INTEGER NOT NULL PRIMARY KEY, name CHAR(16), limbcnt INTEGER, family CHAR(16))");
+   # Lightweight demonstration of StoredHash in action (with SQLite)
+   $dbh->do("CREATE TABLE animals (speciesid INTEGER NOT NULL PRIMARY KEY, name CHAR(16), limbcnt INTEGER, family CHAR(16))");
    my $shp = StoredHash->new('table' => 'animals', 'pkey' => ['speciesid'],
       'autoid' => 1, 'dbh' => $dbh, 'debug' => 0);
    # Hash object to be stored

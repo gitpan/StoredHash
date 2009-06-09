@@ -1,13 +1,28 @@
 #!/usr/bin/perl
 # Test Loading sets (AoH) and individual entries (hashes)
 # Depends on DBI CSV file driver (DBD::CSV)
-use Test::More tests => 5;
+use Test::More; # tests => 5;
 use Data::Dumper;
 use StoredHash;
 use DBI;
 
 $Data::Dumper::Indent = 0;
 our $dbh;
+
+my $fmsg = "To run this test $0, install DBD::CSV - DBI Driver for CSV files.";
+my $dlf = 0;
+
+# Determine plan / skip according to DBD::CSV availability
+SKIP: {
+   eval {require(DBD::CSV)};
+   #exit(1);
+   if ($@) {$dlf = 1;}
+   #if ($dlf) {skip($fmsg, 5);}
+   if ($dlf) {plan(skip_all => "DBD::CSV Not available (not fatal, $fmsg)");}
+   else {plan(tests => 5);}
+   #NA:if (!require_ok(DBD::CSV)) {skip($fmsg, 5);}
+
+};
 
 #$dbh = DBI->connect("DBI:CSV:f_dir=t");
 $dbh = DBI->connect(qq{DBI:CSV:csv_sep_char=\\;;csv_eol=\n;});

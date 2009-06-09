@@ -39,6 +39,14 @@ Installation is based on the standard CPAN Module install flow:
   make test
   make install
 
+On Windows you should get "make" going by:
+- downloading Microsoft nmake.exe (substitue make  => nmake above)
+- using Cygwin or Mingw make
+
+Unpackaging tar.gz on Win can be done by
+- WinZip, 7-zip
+- Cygwin tar
+
 == Author
 
 Olli Hollmen - olli.hollmen@gmail.com
